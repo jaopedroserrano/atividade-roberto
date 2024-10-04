@@ -1,38 +1,39 @@
-.App {
+/* Estilos globais para o modo claro */
+body.light-mode {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Estilos globais para o modo escuro */
+body.dark-mode {
+  background-color: #000000; /* Fundo preto */
+  color: #ffffff; /* Texto branco */
+}
+
+.app {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title {
+  color: inherit; /* Texto do título irá herdar a cor de acordo com o tema */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body.dark-mode .app-title {
+  color: #ffffff; /* Título branco no modo escuro */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body.light-mode .app-title {
+  color: #333; /* Título escuro no modo claro */
 }
 
-.App-link {
-  color: #61dafb;
+/* Ajuste dos elementos do TaskForm, inputs, etc. */
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode button {
+  background-color: #333; /* Cor dos inputs no modo escuro */
+  color: #ffffff; /* Texto dos inputs no modo escuro */
+  border: 1px solid #555; /* Borda suave no modo escuro */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
